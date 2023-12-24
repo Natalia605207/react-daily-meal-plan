@@ -203,6 +203,16 @@ body {
     flex-wrap: wrap;
   }
 
+  .bottomInfo, a {
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+  a:hover {
+    color: #77cf40;
+    text-shadow: 2px 2px 10px #000000;
+  }
+
   @keyframes rotate {
     from {
       transform: rotate(0deg);

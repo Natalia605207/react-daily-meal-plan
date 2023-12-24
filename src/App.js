@@ -83,6 +83,7 @@ function App() {
       updateDay={updateDay}
       />
     </div>
+    <p className="bottomInfo">Designed and developed by <a href="https://natalia-musikhina-portfolio.glitch.me/" target="_blank" rel="noreferrer">Natalia Musikhina</a></p>
     </div>
   );
 }
