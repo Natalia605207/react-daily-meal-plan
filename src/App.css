@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
-}
+body {
+    background-image: url("./assets/back.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(22,46,48,0.3);
+    min-height: 100vh;
+  }
+    
+  h1 {
+    color: #dcedf7;
+    font-size: 45px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 14px #000000;
+    letter-spacing: 1px;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .subheading {
+    text-shadow: 2px 2px 12px #000000;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 50px 20px;
+    margin: 30px 0px;
+    width: 80%;
+  }
+
+  .all-days {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 5px;
+  }
+
+  .button-add {
+    font-size: 17px;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #4BA50D;
+    background-color: #77cf40;
+    box-shadow:  24px 24px 48px #859185,
+    -24px -24px 48px #b3c5b3;
+  }
+  
+  .button-add, .button_icon, .button_text {
+    transition: all 0.3s;
+  }
+  
+  .button-add .button_text {
+    transform: translateX(20px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button-add .button_icon {
+    position: absolute;
+    transform: translateX(120px);
+    height: 100%;
+    width: 39px;
+    background-color: #4BA50D;
+    border: 1px solid #4BA50D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-add .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button-add:hover {
+    background: #4BA50D;
+  }
+  
+  .button-add:hover .button_text {
+    color: transparent;
+  }
+  
+  .button-add:hover .button_icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button-add:active .button_icon {
+    background-color: #4BA50D;
+  }
+  
+  .button-add:active {
+    border: 1px solid #4BA50D;
+  }
+  
+  .button-delete {
+    background: none;
+    border: none;
+    color: #FF632B;
+    font-size: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .button-delete:hover {
+    color: #CB3500;
+    text-decoration: underline;
+  }
+  
+  .meal {
+    width: 500px;
+    padding: 2px 10px 10px;
+    margin-bottom: 7px;
+    border:none;
+    border-radius: 16px;
+  }
+
+  .selected {
+    background-color: #FAD061;
+  }
+  
+  .default {
+    background-color: #dcedf7;
+  }
+  
+  .whole-plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAD061;
+    padding: 40px 5px 60px;
+    border-radius: 16px;
+    flex: 1;
+  }
+
+  .saladBowl {
+    width: 400px;
+    animation: rotate 20s infinite linear;
+    margin-right: 70px;
+  }
+
+  .common {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #dcedf7;
+    color: #41493B;
+    margin-top: 20px;
+  }
+  
+  .myInput {
+    height: 20px;
+  }
+
+  textarea {
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 20px;
+  }
+
+  .title {
+    color: #41493B;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  .field {
+    color: #41493B;
+    font-size: 14px;
+    border-bottom: 1px dotted #41493B;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@media all and (max-width: 1300px) {
+  .App {
+    gap: 10px;
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .saladBowl {
+    width: 350px;
+    margin-right: 0px;
+  }
+
+  .meal {
+    width: 400px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media all and (max-width: 970px) {
+  .meal, .saladBowl {
+    width: 300px;
   }
 }
+
+@media all and (max-width: 970px) {
+  .meal, .saladBowl {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .saladBowl {
+    width: 270px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .App {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 30px 0px 0px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .meal {
+    width: 290px;
+    padding: 2px 5px 10px;
+  }
+
+  .whole-plan {
+    flex: 0;
+    width: 290px;
+    padding: 30px 2px 60px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .App {
+    width: 95%;
+  }
+
+  .meal {
+    width: 250px;
+  }
+
+  .whole-plan {
+    width: 250px;
+  }
+}
+  
+  
+  
+  
